@@ -1,0 +1,43 @@
+.sidebarGrps{
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.sidebarGrps:hover{
+    background-color: #ebebeb;
+}
+
+.sidebarGrps button{
+    padding: 10px;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    background-color: #ffc107;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebarChat_info > h2{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.sidebarChat_info > p{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.sidebarChat_info{
+    margin-left: 10px;
+}
+
+.add-new-chat-title{
+    margin: 0px 0px 0px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
