@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
-
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
@@ -49,7 +48,6 @@ function SignIn(){
   }
   return(
     <>
-      {/* <button className="sign-in" onClick={SignInWithGoogle}>Sign in with Google</button> */}
       <div className="card">
         <div className="container">
           <h3><b>One Time Sign In</b></h3>
@@ -101,8 +99,6 @@ function Chatroom(){
     </main>
 
     <form onSubmit={sendMessage}>
-      {/* <input value={formValue} onChange={(e)=>setFormValue(e.target.value)} placeholder="Write text here.." /> */}
-      {/* <button type="submit" disabled={!formValue}></button> */}
       <Input className='msg_input' placeholder='enter your message' value={formValue} 
         onChange={e=>{setFormValue(e.target.value)}}></Input>
         <IconButton className='snd-msg' type='submit' disabled={!formValue} onClick={sendMessage}>
