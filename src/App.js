@@ -5,7 +5,8 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
-
+import { Input,IconButton } from '@material-ui/core';
+import SendIcon from '@material-ui/icons/Send';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
@@ -48,7 +49,14 @@ function SignIn(){
   }
   return(
     <>
-      <button className="sign-in" onClick={SignInWithGoogle}>Sign in with Google</button>
+      {/* <button className="sign-in" onClick={SignInWithGoogle}>Sign in with Google</button> */}
+      <div className="card">
+        <div className="container">
+          <h3><b>One Time Sign In</b></h3>
+          <p style={{color:'black'}}>Sign in with your google account to get started.</p>
+          <button className='sign-in' onClick={SignInWithGoogle}>Sign in with Google</button>
+        </div>
+      </div>
       
     </>
   )
@@ -93,8 +101,13 @@ function Chatroom(){
     </main>
 
     <form onSubmit={sendMessage}>
-      <input value={formValue} onChange={(e)=>setFormValue(e.target.value)} placeholder="Write text here.." />
-      <button type="submit" disabled={!formValue}>🕊️</button>
+      {/* <input value={formValue} onChange={(e)=>setFormValue(e.target.value)} placeholder="Write text here.." /> */}
+      {/* <button type="submit" disabled={!formValue}></button> */}
+      <Input className='msg_input' placeholder='enter your message' value={formValue} 
+        onChange={e=>{setFormValue(e.target.value)}}></Input>
+        <IconButton className='snd-msg' type='submit' disabled={!formValue} onClick={sendMessage}>
+          <SendIcon />
+        </IconButton>
     </form>
     </>
   )
